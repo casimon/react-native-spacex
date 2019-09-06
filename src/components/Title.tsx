@@ -10,7 +10,8 @@ import {
 
 const styles = StyleSheet.create({
   title: {
-    flex: 1,
+    paddingHorizontal: 6,
+    paddingVertical: 3,
   },
   titleText: {
     fontSize: 16,
@@ -24,7 +25,7 @@ interface Props {
   styleText?: StyleProp<TextStyle>;
 }
 
-class Title extends React.Component<Props> {
+class Title extends React.PureComponent<Props> {
   render() {
     return (
       <View style={[styles.title, this.props.style]}>

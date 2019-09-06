@@ -1,25 +1,29 @@
 import React from 'react';
-import {Image, View, StyleSheet} from 'react-native';
+import {Image, ImageStyle, View, StyleSheet, StyleProp} from 'react-native';
 
 const styles = StyleSheet.create({
-  thumbnail: {
+  image: {
     width: 50,
     height: 50,
   },
 });
 
 interface Props {
-  uri: string;
+  width?: number;
+  height?: number;
+  url: string;
+  style: StyleProp<ImageStyle>;
 }
 
-class Thumbnail extends React.Component<Props> {
+class Thumbnail extends React.PureComponent<Props> {
   render() {
+    const {width, height, url, style} = this.props;
     return (
       <View>
         <Image
-          style={styles.thumbnail}
+          style={[styles.image, style, {width, height}]}
           source={{
-            uri: this.props.uri,
+            uri: url,
           }}
           resizeMode="contain"
         />

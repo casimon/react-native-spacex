@@ -12,7 +12,8 @@ import moment from 'moment';
 
 const styles = StyleSheet.create({
   date: {
-    flex: 1,
+    paddingHorizontal: 6,
+    paddingVertical: 3,
   },
   dateText: {
     fontSize: 12,
@@ -22,12 +23,12 @@ const styles = StyleSheet.create({
 
 interface Props {
   date: string;
-  format: string;
+  format?: string;
   style?: StyleProp<ViewStyle>;
   styleText?: StyleProp<TextStyle>;
 }
 
-class Date extends React.Component<Props> {
+class Date extends React.PureComponent<Props> {
   formatDateToLocal = (date: string, format: string) => {
     return moment
       .utc(date)
@@ -40,7 +41,7 @@ class Date extends React.Component<Props> {
     return (
       <View style={[styles.date, this.props.style]}>
         <Text style={[styles.dateText, this.props.styleText]}>
-          {this.formatDateToLocal(date, format)}
+          {this.formatDateToLocal(date, format || 'llll')}
         </Text>
       </View>
     );
