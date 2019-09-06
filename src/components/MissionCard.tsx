@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  Text,
+  TouchableOpacity,
   View,
   StyleSheet,
   StyleProp,
@@ -36,12 +36,15 @@ interface Props {
   thumbnail: string;
   style?: StyleProp<ViewStyle>;
   styleText?: StyleProp<TextStyle>;
+  onPress: () => void;
 }
 
 class MissionCard extends React.PureComponent<Props> {
   render() {
     return (
-      <View style={[styles.card, this.props.style]}>
+      <TouchableOpacity
+        style={[styles.card, this.props.style]}
+        onPress={this.props.onPress}>
         <Thumbnail
           url={this.props.thumbnail}
           width={50}
@@ -52,7 +55,7 @@ class MissionCard extends React.PureComponent<Props> {
           <Title text={this.props.title} />
           <Date date={this.props.date} format="llll" />
         </View>
-      </View>
+      </TouchableOpacity>
     );
   }
 }
