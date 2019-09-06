@@ -11,15 +11,25 @@ import {
 const styles = StyleSheet.create({
   p: {
     paddingVertical: 8,
+    paddingHorizontal: 6,
+  },
+  pLabel: {
+    fontSize: 14,
+    color: '#000000',
+    fontWeight: 'bold',
+    marginBottom: 8,
+    textAlign: 'center',
   },
   pText: {
-    fontSize: 12,
+    fontSize: 14,
     color: '#000000',
+    textAlign: 'center',
   },
 });
 
 interface Props {
   text: string;
+  label?: string;
   style?: StyleProp<ViewStyle>;
   styleText?: StyleProp<TextStyle>;
 }
@@ -28,6 +38,9 @@ class P extends React.PureComponent<Props> {
   render() {
     return (
       <View style={[styles.p, this.props.style]}>
+        {this.props.label && (
+          <Text style={styles.pLabel}>{this.props.label}</Text>
+        )}
         <Text style={[styles.pText, this.props.styleText]}>
           {this.props.text}
         </Text>
