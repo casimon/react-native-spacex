@@ -1,21 +1,19 @@
 import React from 'react';
-import { Button, View, Text } from 'react-native';
-import { NavigationInjectedProps } from 'react-navigation';
+import {Button, View, Text} from 'react-native';
 
-type Props = NavigationInjectedProps;
+import MissionCard from '../components/MissionCard';
 
-class HomeScreen extends React.Component<Props> {
+class HomeScreen extends React.Component {
   render() {
     return (
-      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-        <Text>Home Screen</Text>
-        <Button
-          title="Go to Details"
-          onPress={() => this.props.navigation.navigate('About')}
-        />
+      <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
+        <MissionCard title="CRS-17" date="2019-05-04T06:48:00.000Z" />
+        <MissionCard title="CRS-17" date="2019-05-04T06:48:00.000Z" />
+        <MissionCard title="CRS-17" date="2019-05-04T06:48:00.000Z" />
+        <MissionCard title="CRS-17" date="2019-05-04T06:48:00.000Z" />
       </View>
     );
   }
 }
 
-export default HomeScreen
+export default HomeScreen;
