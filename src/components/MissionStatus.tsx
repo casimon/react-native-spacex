@@ -8,8 +8,11 @@ import {
   ViewStyle,
 } from 'react-native';
 
+import colors from '../constants/colors';
+
 const styles = StyleSheet.create({
   missionStatus: {
+    width: 100,
     marginHorizontal: 6,
     paddingVertical: 3,
     paddingHorizontal: 6,
@@ -18,8 +21,9 @@ const styles = StyleSheet.create({
     marginVertical: 6,
   },
   missionStatusText: {
-    fontSize: 14,
-    color: '#333',
+    fontSize: 12,
+    color: colors.white,
+    textAlign: 'center',
   },
   success: {
     backgroundColor: '#359A53',
@@ -33,8 +37,8 @@ const styles = StyleSheet.create({
 });
 
 interface Props {
-  success: boolean;
-  tentative: boolean;
+  success?: boolean;
+  tentative?: boolean;
   style?: StyleProp<ViewStyle>;
   styleText?: StyleProp<TextStyle>;
 }
@@ -43,7 +47,7 @@ class MissionStatus extends React.PureComponent<Props> {
   render() {
     const {success, tentative} = this.props;
 
-    return (
+    return success === false || tentative === false ? (
       <View
         style={[
           styles.missionStatus,
@@ -55,10 +59,10 @@ class MissionStatus extends React.PureComponent<Props> {
             : styles.failure,
         ]}>
         <Text style={[styles.missionStatusText, this.props.styleText]}>
-          Status: {success ? 'Successful' : tentative ? 'Tentative' : 'Failure'}
+          {success ? 'Successful' : tentative ? 'Tentative' : 'Failure'}
         </Text>
       </View>
-    );
+    ) : null;
   }
 }
 

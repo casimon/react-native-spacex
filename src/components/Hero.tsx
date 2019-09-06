@@ -5,7 +5,6 @@ const styles = StyleSheet.create({
   image: {
     width: 100,
     height: 100,
-    marginBottom: 16,
   },
 });
 
@@ -17,15 +16,13 @@ class Hero extends React.PureComponent<Props> {
   render() {
     const {url} = this.props;
     return (
-      <View style={{borderRadius: 10, overflow: 'hidden'}}>
-        <Image
-          style={styles.image}
-          source={{
-            uri: url,
-          }}
-          resizeMode="contain"
-        />
-      </View>
+      <Image
+        style={styles.image}
+        source={{
+          uri: url,
+        }}
+        resizeMode="contain"
+      />
     );
   }
 }
