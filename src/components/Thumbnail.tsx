@@ -4,8 +4,8 @@ import {Image, ImageStyle, View, StyleSheet, StyleProp} from 'react-native';
 const styles = StyleSheet.create({
   image: {
     width: 50,
-    height: 50,
-  },
+    height: 50
+  }
 });
 
 interface Props {
@@ -23,7 +23,7 @@ class Thumbnail extends React.PureComponent<Props> {
         <Image
           style={[styles.image, style, {width, height}]}
           source={{
-            uri: url,
+            uri: url
           }}
           resizeMode="contain"
         />

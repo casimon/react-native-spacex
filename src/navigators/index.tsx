@@ -6,20 +6,26 @@ import DetailScreen from '../screens/DetailScreen';
 const AppNavigator = createStackNavigator(
   {
     Home: HomeScreen,
-    Detail: DetailScreen,
+    Detail: DetailScreen
   },
   {
     initialRouteName: 'Home',
+    animationEnabled: false,
+    transitionConfig: () => ({
+      transitionSpec: {
+        duration: 0
+      }
+    }),
     defaultNavigationOptions: {
       headerStyle: {
-        backgroundColor: '#000000',
+        backgroundColor: '#000000'
       },
       headerTintColor: '#fff',
       headerTitleStyle: {
-        fontWeight: 'bold',
-      },
-    },
-  },
+        fontWeight: 'bold'
+      }
+    }
+  }
 );
 
 export default createAppContainer(AppNavigator);

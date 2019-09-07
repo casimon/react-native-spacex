@@ -5,18 +5,18 @@ import {
   StyleSheet,
   StyleProp,
   TextStyle,
-  ViewStyle,
+  ViewStyle
 } from 'react-native';
 
 const styles = StyleSheet.create({
   title: {
     paddingHorizontal: 6,
-    paddingVertical: 3,
+    paddingVertical: 3
   },
   titleText: {
     fontSize: 24,
-    color: '#000000',
-  },
+    color: '#000000'
+  }
 });
 
 interface Props {
@@ -29,7 +29,9 @@ class SubTitle extends React.PureComponent<Props> {
   render() {
     return (
       <View style={[styles.title, this.props.style]}>
-        <Text style={[styles.titleText, this.props.styleText]}>
+        <Text
+          style={[styles.titleText, this.props.styleText]}
+          allowFontScaling={false}>
           {this.props.text}
         </Text>
       </View>

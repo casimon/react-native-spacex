@@ -5,7 +5,7 @@ import {
   StyleSheet,
   StyleProp,
   TextStyle,
-  ViewStyle,
+  ViewStyle
 } from 'react-native';
 
 const styles = StyleSheet.create({
@@ -15,8 +15,8 @@ const styles = StyleSheet.create({
     height: 4,
     alignSelf: 'center',
     marginVertical: 16,
-    borderRadius: 2,
-  },
+    borderRadius: 2
+  }
 });
 
 interface Props {

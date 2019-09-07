@@ -4,8 +4,8 @@ import {Image, ImageStyle, View, StyleSheet, StyleProp} from 'react-native';
 const styles = StyleSheet.create({
   image: {
     width: 100,
-    height: 100,
-  },
+    height: 100
+  }
 });
 
 interface Props {
@@ -19,7 +19,7 @@ class Hero extends React.PureComponent<Props> {
       <Image
         style={styles.image}
         source={{
-          uri: url,
+          uri: url
         }}
         resizeMode="contain"
       />

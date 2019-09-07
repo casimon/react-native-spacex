@@ -7,8 +7,8 @@ const styles = StyleSheet.create({
   image: {
     width: 150,
     height: 30,
-    tintColor: '#fff',
-  },
+    tintColor: '#fff'
+  }
 });
 
 class LogoTitle extends React.Component {

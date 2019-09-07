@@ -3,7 +3,7 @@ import {SafeAreaView, StyleSheet, ScrollView, View} from 'react-native';
 import {
   NavigationParams,
   NavigationScreenProp,
-  NavigationState,
+  NavigationState
 } from 'react-navigation';
 
 import Date from '../components/Date';
@@ -19,22 +19,22 @@ import colors from '../constants/colors';
 
 const styles = StyleSheet.create({
   contentContainer: {
-    flexGrow: 1,
+    flexGrow: 1
   },
   header: {
     backgroundColor: colors.black,
     alignItems: 'center',
-    paddingVertical: 24,
+    paddingVertical: 24
   },
   headerExtra: {
     backgroundColor: colors.black,
     alignItems: 'center',
-    paddingBottom: 24,
+    paddingBottom: 24
   },
   body: {
     alignItems: 'center',
-    padding: 16,
-  },
+    padding: 16
+  }
 });
 
 interface Props {
@@ -45,9 +45,9 @@ class DetailScreen extends React.Component<Props> {
   static navigationOptions = {
     headerTitle: <LogoTitle />,
     headerBackTitleStyle: {
-      fontSize: 14,
+      fontSize: 14
     },
-    headerStyle: {backgroundColor: colors.black, borderBottomWidth: 0},
+    headerStyle: {backgroundColor: colors.black, borderBottomWidth: 0}
   };
 
   render() {
@@ -78,7 +78,7 @@ class DetailScreen extends React.Component<Props> {
               styleText={{
                 fontSize: 12,
                 fontWeight: 'bold',
-                color: colors.white,
+                color: colors.white
               }}
             />
             <MissionStatus

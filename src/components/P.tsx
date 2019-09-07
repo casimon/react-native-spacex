@@ -5,26 +5,26 @@ import {
   StyleSheet,
   StyleProp,
   TextStyle,
-  ViewStyle,
+  ViewStyle
 } from 'react-native';
 
 const styles = StyleSheet.create({
   p: {
     paddingVertical: 8,
-    paddingHorizontal: 6,
+    paddingHorizontal: 6
   },
   pLabel: {
     fontSize: 14,
     color: '#000000',
     fontWeight: 'bold',
     marginBottom: 8,
-    textAlign: 'center',
+    textAlign: 'center'
   },
   pText: {
     fontSize: 14,
     color: '#000000',
-    textAlign: 'center',
-  },
+    textAlign: 'center'
+  }
 });
 
 interface Props {
@@ -39,9 +39,13 @@ class P extends React.PureComponent<Props> {
     return (
       <View style={[styles.p, this.props.style]}>
         {this.props.label && (
-          <Text style={styles.pLabel}>{this.props.label}</Text>
+          <Text style={styles.pLabel} allowFontScaling={false}>
+            {this.props.label}
+          </Text>
         )}
-        <Text style={[styles.pText, this.props.styleText]}>
+        <Text
+          style={[styles.pText, this.props.styleText]}
+          allowFontScaling={false}>
           {this.props.text}
         </Text>
       </View>

@@ -5,7 +5,7 @@ import {
   StyleSheet,
   StyleProp,
   TextStyle,
-  ViewStyle,
+  ViewStyle
 } from 'react-native';
 
 import moment from 'moment';
@@ -13,12 +13,12 @@ import moment from 'moment';
 const styles = StyleSheet.create({
   date: {
     paddingHorizontal: 6,
-    paddingVertical: 3,
+    paddingVertical: 3
   },
   dateText: {
     fontSize: 12,
-    color: '#333333',
-  },
+    color: '#333333'
+  }
 });
 
 interface Props {
@@ -40,7 +40,9 @@ class Date extends React.PureComponent<Props> {
     const {date, format} = this.props;
     return (
       <View style={[styles.date, this.props.style]}>
-        <Text style={[styles.dateText, this.props.styleText]}>
+        <Text
+          style={[styles.dateText, this.props.styleText]}
+          allowFontScaling={false}>
           {this.formatDateToLocal(date, format || 'llll')}
         </Text>
       </View>

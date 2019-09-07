@@ -5,7 +5,7 @@ import {
   StyleSheet,
   StyleProp,
   TextStyle,
-  ViewStyle,
+  ViewStyle
 } from 'react-native';
 
 import colors from '../constants/colors';
@@ -18,22 +18,22 @@ const styles = StyleSheet.create({
     paddingHorizontal: 6,
     backgroundColor: '#ccc',
     borderRadius: 2,
-    marginVertical: 6,
+    marginVertical: 6
   },
   missionStatusText: {
     fontSize: 12,
     color: colors.white,
-    textAlign: 'center',
+    textAlign: 'center'
   },
   success: {
-    backgroundColor: '#359A53',
+    backgroundColor: '#359A53'
   },
   failure: {
-    backgroundColor: '#9A3635',
+    backgroundColor: '#9A3635'
   },
   tentative: {
-    backgroundColor: '#D3BF47',
-  },
+    backgroundColor: '#D3BF47'
+  }
 });
 
 interface Props {
@@ -56,7 +56,7 @@ class MissionStatus extends React.PureComponent<Props> {
             ? styles.success
             : tentative
             ? styles.tentative
-            : styles.failure,
+            : styles.failure
         ]}>
         <Text style={[styles.missionStatusText, this.props.styleText]}>
           {success ? 'Successful' : tentative ? 'Tentative' : 'Failure'}

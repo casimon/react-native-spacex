@@ -5,7 +5,7 @@ import {
   StyleSheet,
   StyleProp,
   TextStyle,
-  ViewStyle,
+  ViewStyle
 } from 'react-native';
 
 import Date from './Date';
@@ -20,14 +20,14 @@ const styles = StyleSheet.create({
     marginHorizontal: 16,
     marginTop: 6,
     padding: 12,
-    flexDirection: 'row',
+    flexDirection: 'row'
   },
   cardInfo: {
-    flex: 1,
+    flex: 1
   },
   thumbnail: {
-    marginRight: 10,
-  },
+    marginRight: 10
+  }
 });
 
 interface Props {

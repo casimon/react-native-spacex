@@ -5,18 +5,18 @@ import {
   StyleSheet,
   StyleProp,
   TextStyle,
-  ViewStyle,
+  ViewStyle
 } from 'react-native';
 
 const styles = StyleSheet.create({
   title: {
     paddingHorizontal: 6,
-    paddingVertical: 3,
+    paddingVertical: 3
   },
   titleText: {
     fontSize: 16,
-    color: '#000000',
-  },
+    color: '#000000'
+  }
 });
 
 interface Props {
