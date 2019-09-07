@@ -70,15 +70,14 @@ class HomeScreen extends React.Component<Props, State> {
 
   keyExtractor = (item: any) => item.mission_name.replace(/\s/g, '');
 
-  renderItem = ({item}: any) =>
-    item.links.mission_patch_small && (
-      <MissionCard
-        title={item.mission_name}
-        date={item.launch_date_utc}
-        thumbnail={item.links.mission_patch_small}
-        onPress={() => this.onPress(item)}
-      />
-    );
+  renderItem = ({item}: any) => (
+    <MissionCard
+      title={item.mission_name}
+      date={item.launch_date_utc}
+      thumbnail={item.links.mission_patch_small}
+      onPress={() => this.onPress(item)}
+    />
+  );
 
   render() {
     const {launches, loading} = this.props;
