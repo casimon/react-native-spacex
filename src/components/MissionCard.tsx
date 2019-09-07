@@ -45,12 +45,7 @@ class MissionCard extends React.PureComponent<Props> {
       <TouchableOpacity
         style={[styles.card, this.props.style]}
         onPress={this.props.onPress}>
-        <Thumbnail
-          url={this.props.thumbnail}
-          width={50}
-          height={50}
-          style={styles.thumbnail}
-        />
+        <Thumbnail url={this.props.thumbnail} style={styles.thumbnail} />
         <View style={styles.cardInfo}>
           <Title text={this.props.title} styleText={{color: colors.white}} />
           <Date
