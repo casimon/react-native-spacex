@@ -68,6 +68,7 @@ react-native run-ios
 
 This spaceX app is intended to be an MVP that could be delivered in hours not days. Some nice to haves if time permitted:
 
+- Search is by mission name not by rocket name to show filtering
 - Proper splash screen
 - Type definition for spaceX api response
 - Animated loading screen
