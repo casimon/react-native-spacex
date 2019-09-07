@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders search with empty search string 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "padding": 16,
+        "paddingTop": 22,
+      },
+      undefined,
+    ]
+  }
+>
+  <TextInput
+    allowFontScaling={false}
+    autoCompleteType="off"
+    autoCorrect={false}
+    onChangeText={[Function]}
+    placeholder="Search launches e.g CRS-17"
+    placeholderTextColor="#666"
+    rejectResponderTermination={true}
+    style={
+      Object {
+        "backgroundColor": "#ccc",
+        "borderRadius": 20,
+        "height": 40,
+        "paddingHorizontal": 30,
+      }
+    }
+    underlineColorAndroid="transparent"
+    value=""
+  />
+</View>
+`;
+
+exports[`renders search with search string text 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "padding": 16,
+        "paddingTop": 22,
+      },
+      undefined,
+    ]
+  }
+>
+  <TextInput
+    allowFontScaling={false}
+    autoCompleteType="off"
+    autoCorrect={false}
+    onChangeText={[Function]}
+    placeholder="Search launches e.g CRS-17"
+    placeholderTextColor="#666"
+    rejectResponderTermination={true}
+    style={
+      Object {
+        "backgroundColor": "#ccc",
+        "borderRadius": 20,
+        "height": 40,
+        "paddingHorizontal": 30,
+      }
+    }
+    underlineColorAndroid="transparent"
+    value="CRS-17"
+  />
+</View>
+`;

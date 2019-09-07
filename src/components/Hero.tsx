@@ -1,5 +1,6 @@
 import React from 'react';
-import {Image, ImageStyle, View, StyleSheet, StyleProp} from 'react-native';
+import {Image, StyleSheet} from 'react-native';
+import images from '../images';
 
 const styles = StyleSheet.create({
   image: {
@@ -9,18 +10,24 @@ const styles = StyleSheet.create({
 });
 
 interface Props {
-  url: string;
+  url?: string;
 }
 
 class Hero extends React.PureComponent<Props> {
   render() {
     const {url} = this.props;
-    return (
+    return url ? (
       <Image
         style={styles.image}
         source={{
           uri: url
         }}
+        resizeMode="contain"
+      />
+    ) : (
+      <Image
+        style={[styles.image, {borderRadius: 6}]}
+        source={images.missing}
         resizeMode="contain"
       />
     );

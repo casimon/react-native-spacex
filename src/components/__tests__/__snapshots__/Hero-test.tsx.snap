@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders hero correctly with missing image 1`] = `
+<Image
+  resizeMode="contain"
+  source={
+    Object {
+      "testUri": "../../../src/images/missing.png",
+    }
+  }
+  style={
+    Array [
+      Object {
+        "height": 100,
+        "width": 100,
+      },
+      Object {
+        "borderRadius": 6,
+      },
+    ]
+  }
+/>
+`;
+
+exports[`renders hero correctly with patch image 1`] = `
+<Image
+  resizeMode="contain"
+  source={
+    Object {
+      "uri": "https://images2.imgbox.com/12/47/6uim8L1a_o.png",
+    }
+  }
+  style={
+    Object {
+      "height": 100,
+      "width": 100,
+    }
+  }
+/>
+`;

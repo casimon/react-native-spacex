@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders logo title 1`] = `
+<Image
+  resizeMode="contain"
+  source={
+    Object {
+      "testUri": "../../../src/images/logo.png",
+    }
+  }
+  style={
+    Object {
+      "height": 30,
+      "tintColor": "#fff",
+      "width": 150,
+    }
+  }
+/>
+`;

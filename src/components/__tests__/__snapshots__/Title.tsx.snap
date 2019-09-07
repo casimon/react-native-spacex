@@ -1,0 +1,89 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders title with text 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "paddingHorizontal": 6,
+        "paddingVertical": 3,
+      },
+      undefined,
+    ]
+  }
+>
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "#000000",
+          "fontSize": 16,
+        },
+        undefined,
+      ]
+    }
+  >
+    Test text prop
+  </Text>
+</View>
+`;
+
+exports[`renders title with text and optional style prop 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "paddingHorizontal": 6,
+        "paddingVertical": 3,
+      },
+      Object {
+        "margin": 2,
+      },
+    ]
+  }
+>
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "#000000",
+          "fontSize": 16,
+        },
+        undefined,
+      ]
+    }
+  >
+    Test text
+  </Text>
+</View>
+`;
+
+exports[`renders title with text and optional styleText prop 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "paddingHorizontal": 6,
+        "paddingVertical": 3,
+      },
+      undefined,
+    ]
+  }
+>
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "#000000",
+          "fontSize": 16,
+        },
+        Object {
+          "fontSize": 12,
+        },
+      ]
+    }
+  >
+    Test text
+  </Text>
+</View>
+`;

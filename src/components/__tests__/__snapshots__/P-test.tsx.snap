@@ -1,0 +1,139 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders paragraph with text 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "paddingHorizontal": 6,
+        "paddingVertical": 8,
+      },
+      undefined,
+    ]
+  }
+>
+  <Text
+    allowFontScaling={false}
+    style={
+      Array [
+        Object {
+          "color": "#000000",
+          "fontSize": 14,
+          "textAlign": "center",
+        },
+        undefined,
+      ]
+    }
+  >
+    Test text prop
+  </Text>
+</View>
+`;
+
+exports[`renders paragraph with text and optional label prop 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "paddingHorizontal": 6,
+        "paddingVertical": 8,
+      },
+      undefined,
+    ]
+  }
+>
+  <Text
+    allowFontScaling={false}
+    style={
+      Object {
+        "color": "#000000",
+        "fontSize": 14,
+        "fontWeight": "bold",
+        "marginBottom": 8,
+        "textAlign": "center",
+      }
+    }
+  >
+    Test label
+  </Text>
+  <Text
+    allowFontScaling={false}
+    style={
+      Array [
+        Object {
+          "color": "#000000",
+          "fontSize": 14,
+          "textAlign": "center",
+        },
+        undefined,
+      ]
+    }
+  >
+    Test text
+  </Text>
+</View>
+`;
+
+exports[`renders paragraph with text and optional style prop 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "paddingHorizontal": 6,
+        "paddingVertical": 8,
+      },
+      Object {
+        "margin": 2,
+      },
+    ]
+  }
+>
+  <Text
+    allowFontScaling={false}
+    style={
+      Array [
+        Object {
+          "color": "#000000",
+          "fontSize": 14,
+          "textAlign": "center",
+        },
+        undefined,
+      ]
+    }
+  >
+    Test text
+  </Text>
+</View>
+`;
+
+exports[`renders paragraph with text and optional styleText prop 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "paddingHorizontal": 6,
+        "paddingVertical": 8,
+      },
+      undefined,
+    ]
+  }
+>
+  <Text
+    allowFontScaling={false}
+    style={
+      Array [
+        Object {
+          "color": "#000000",
+          "fontSize": 14,
+          "textAlign": "center",
+        },
+        Object {
+          "fontSize": 12,
+        },
+      ]
+    }
+  >
+    Test text
+  </Text>
+</View>
+`;

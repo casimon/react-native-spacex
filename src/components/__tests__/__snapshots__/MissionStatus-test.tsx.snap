@@ -1,0 +1,151 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders mission status with all props undefined 1`] = `null`;
+
+exports[`renders mission status with success false 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#ccc",
+        "borderRadius": 2,
+        "marginHorizontal": 6,
+        "marginVertical": 6,
+        "paddingHorizontal": 6,
+        "paddingVertical": 3,
+        "width": 100,
+      },
+      undefined,
+      Object {
+        "backgroundColor": "#9A3635",
+      },
+    ]
+  }
+>
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "#ffffff",
+          "fontSize": 12,
+          "textAlign": "center",
+        },
+        undefined,
+      ]
+    }
+  >
+    Failure
+  </Text>
+</View>
+`;
+
+exports[`renders mission status with success true 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#ccc",
+        "borderRadius": 2,
+        "marginHorizontal": 6,
+        "marginVertical": 6,
+        "paddingHorizontal": 6,
+        "paddingVertical": 3,
+        "width": 100,
+      },
+      undefined,
+      Object {
+        "backgroundColor": "#9A3635",
+      },
+    ]
+  }
+>
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "#ffffff",
+          "fontSize": 12,
+          "textAlign": "center",
+        },
+        undefined,
+      ]
+    }
+  >
+    Failure
+  </Text>
+</View>
+`;
+
+exports[`renders mission status with tentative false 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#ccc",
+        "borderRadius": 2,
+        "marginHorizontal": 6,
+        "marginVertical": 6,
+        "paddingHorizontal": 6,
+        "paddingVertical": 3,
+        "width": 100,
+      },
+      undefined,
+      Object {
+        "backgroundColor": "#9A3635",
+      },
+    ]
+  }
+>
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "#ffffff",
+          "fontSize": 12,
+          "textAlign": "center",
+        },
+        undefined,
+      ]
+    }
+  >
+    Failure
+  </Text>
+</View>
+`;
+
+exports[`renders mission status with tentative true 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#ccc",
+        "borderRadius": 2,
+        "marginHorizontal": 6,
+        "marginVertical": 6,
+        "paddingHorizontal": 6,
+        "paddingVertical": 3,
+        "width": 100,
+      },
+      undefined,
+      Object {
+        "backgroundColor": "#9A3635",
+      },
+    ]
+  }
+>
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "#ffffff",
+          "fontSize": 12,
+          "textAlign": "center",
+        },
+        undefined,
+      ]
+    }
+  >
+    Failure
+  </Text>
+</View>
+`;

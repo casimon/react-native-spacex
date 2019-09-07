@@ -41,7 +41,7 @@ class Search extends React.PureComponent<Props> {
           autoCompleteType="off"
           autoCorrect={false}
           placeholder="Search launches e.g CRS-17"
-          placeholderTextColor={colors.black}
+          placeholderTextColor="#666"
         />
       </View>
     );

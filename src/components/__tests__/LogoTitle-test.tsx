@@ -4,11 +4,12 @@
 
 import 'react-native';
 import React from 'react';
-import App from '../App';
+import LogoTitle from '../LogoTitle';
 
 // Note: test renderer must be required after react-native.
 import renderer from 'react-test-renderer';
 
-it('renders correctly', () => {
-  renderer.create(<App />);
+test('renders logo title', () => {
+  const tree = renderer.create(<LogoTitle />).toJSON();
+  expect(tree).toMatchSnapshot();
 });

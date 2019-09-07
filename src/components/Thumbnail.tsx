@@ -1,5 +1,6 @@
 import React from 'react';
 import {Image, ImageStyle, View, StyleSheet, StyleProp} from 'react-native';
+import images from '../images';
 
 const styles = StyleSheet.create({
   image: {
@@ -9,24 +10,30 @@ const styles = StyleSheet.create({
 });
 
 interface Props {
-  width?: number;
-  height?: number;
-  url: string;
-  style: StyleProp<ImageStyle>;
+  url?: string;
+  style?: StyleProp<ImageStyle>;
 }
 
 class Thumbnail extends React.PureComponent<Props> {
   render() {
-    const {width, height, url, style} = this.props;
+    const {url, style} = this.props;
     return (
       <View>
-        <Image
-          style={[styles.image, style, {width, height}]}
-          source={{
-            uri: url
-          }}
-          resizeMode="contain"
-        />
+        {url ? (
+          <Image
+            style={[styles.image, style]}
+            source={{
+              uri: url
+            }}
+            resizeMode="contain"
+          />
+        ) : (
+          <Image
+            style={[styles.image, {borderRadius: 6}]}
+            source={images.missing}
+            resizeMode="contain"
+          />
+        )}
       </View>
     );
   }
