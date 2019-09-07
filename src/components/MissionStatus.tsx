@@ -47,7 +47,7 @@ class MissionStatus extends React.PureComponent<Props> {
   render() {
     const {success, tentative} = this.props;
 
-    return success === false || tentative === false ? (
+    return (
       <View
         style={[
           styles.missionStatus,
@@ -62,7 +62,7 @@ class MissionStatus extends React.PureComponent<Props> {
           {success ? 'Successful' : tentative ? 'Tentative' : 'Failure'}
         </Text>
       </View>
-    ) : null;
+    );
   }
 }
 
