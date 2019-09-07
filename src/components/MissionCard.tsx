@@ -11,14 +11,14 @@ import {
 import Date from './Date';
 import Title from './Title';
 import Thumbnail from './Thumbnail';
+import colors from '../constants/colors';
 
 const styles = StyleSheet.create({
   card: {
-    backgroundColor: '#ccc',
-    borderColor: '#000000',
+    backgroundColor: colors.black,
     borderRadius: 6,
     marginHorizontal: 16,
-    marginTop: 12,
+    marginTop: 6,
     padding: 12,
     flexDirection: 'row',
   },
@@ -52,8 +52,12 @@ class MissionCard extends React.PureComponent<Props> {
           style={styles.thumbnail}
         />
         <View style={styles.cardInfo}>
-          <Title text={this.props.title} />
-          <Date date={this.props.date} format="llll" />
+          <Title text={this.props.title} styleText={{color: colors.white}} />
+          <Date
+            date={this.props.date}
+            format="llll"
+            styleText={{color: colors.white}}
+          />
         </View>
       </TouchableOpacity>
     );

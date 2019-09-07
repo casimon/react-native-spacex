@@ -1,5 +1,11 @@
 import React from 'react';
-import {FlatList, StyleSheet, View} from 'react-native';
+import {
+  ActivityIndicator,
+  FlatList,
+  StyleSheet,
+  SafeAreaView,
+} from 'react-native';
+
 import {
   NavigationParams,
   NavigationScreenProp,
@@ -11,7 +17,6 @@ import {listLaunches} from '../reducers';
 import LogoTitle from '../components/LogoTitle';
 import MissionCard from '../components/MissionCard';
 import Title from '../components/Title';
-import data from '../data/mock';
 
 const styles = StyleSheet.create({
   h1: {
@@ -24,9 +29,11 @@ const styles = StyleSheet.create({
 
 interface Props {
   navigation: NavigationScreenProp<NavigationState, NavigationParams>;
+  launches: any;
+  loading: boolean;
 }
 
-class HomeScreen extends React.Component<Props> {
+class HomeScreen extends React.PureComponent<Props> {
   static navigationOptions = {
     headerTitle: <LogoTitle />,
   };
@@ -39,38 +46,47 @@ class HomeScreen extends React.Component<Props> {
     this.props.navigation.navigate('Detail', {item});
   };
 
-  keyExtractor = (item: any) => item.mission_id[0];
+  keyExtractor = (item: any) => item.mission_name.replace(/\s/g, '');
 
-  renderItem = ({item}: any) => (
-    <MissionCard
-      title={item.mission_name}
-      date={item.launch_date_utc}
-      thumbnail={item.links.mission_patch_small}
-      onPress={() => this.onPress(item)}
-    />
-  );
+  renderItem = ({item}: any) =>
+    item.links.mission_patch_small && (
+      <MissionCard
+        title={item.mission_name}
+        date={item.launch_date_utc}
+        thumbnail={item.links.mission_patch_small}
+        onPress={() => this.onPress(item)}
+      />
+    );
 
   render() {
-    return (
-      <View style={{flex: 1}}>
+    const {launches, loading} = this.props;
+    return loading ? (
+      <SafeAreaView
+        style={{flex: 1, justifyContent: 'center', backgroundColor: '#fff'}}>
+        <ActivityIndicator size="small" color="#000" />
+      </SafeAreaView>
+    ) : (
+      <SafeAreaView style={{flex: 1, backgroundColor: '#fff'}}>
         <Title text="Launches" styleText={styles.h1} />
         <FlatList
-          data={data}
+          data={launches}
           keyExtractor={this.keyExtractor}
           renderItem={this.renderItem}
         />
-      </View>
+      </SafeAreaView>
     );
   }
 }
 
 const mapStateToProps = (state: any) => {
-  let storedLaunches = state.launches.map((launch: any) => ({
-    key: launch.mission_name,
+  let storedLaunches = state.launches.map((launch: any, index: number) => ({
+    key: launch.mission_name.replace(/\s/g, ''),
     ...launch,
   }));
+  let loading = state.loading;
   return {
     launches: storedLaunches,
+    loading,
   };
 };
 

@@ -2,7 +2,7 @@ export const GET_LAUNCHES = 'spacex/launches/LOAD';
 export const GET_LAUNCHES_SUCCESS = 'spacex/launches/LOAD_SUCCESS';
 export const GET_LAUNCHES_FAIL = 'spacex/launches/LOAD_FAIL';
 
-export default function reducer(state = { launches: [] }, action) {
+export default function reducer(state = { launches: [] }, action: any) {
     switch (action.type) {
         case GET_LAUNCHES:
             return { ...state, loading: true };
@@ -24,7 +24,7 @@ export function listLaunches(limit: number, offset: number) {
         type: GET_LAUNCHES,
         payload: {
             request: {
-                url: `/launches?limit=${limit}&offset=${offset}`
+                url: `/launches?limit=${limit}&offset=${offset}&order=desc`
             }
         }
     };
