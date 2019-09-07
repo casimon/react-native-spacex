@@ -5,7 +5,9 @@ import {
   NavigationScreenProp,
   NavigationState,
 } from 'react-navigation';
+import {connect} from 'react-redux';
 
+import {listLaunches} from '../reducers';
 import LogoTitle from '../components/LogoTitle';
 import MissionCard from '../components/MissionCard';
 import Title from '../components/Title';
@@ -28,6 +30,10 @@ class HomeScreen extends React.Component<Props> {
   static navigationOptions = {
     headerTitle: <LogoTitle />,
   };
+
+  componentDidMount() {
+    this.props.listLaunches(30, 0);
+  }
 
   onPress = (item: any) => {
     this.props.navigation.navigate('Detail', {item});
@@ -58,4 +64,21 @@ class HomeScreen extends React.Component<Props> {
   }
 }
 
-export default HomeScreen;
+const mapStateToProps = (state: any) => {
+  let storedLaunches = state.launches.map((launch: any) => ({
+    key: launch.mission_name,
+    ...launch,
+  }));
+  return {
+    launches: storedLaunches,
+  };
+};
+
+const mapDispatchToProps = {
+  listLaunches,
+};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps,
+)(HomeScreen);
