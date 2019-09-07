@@ -8,7 +8,6 @@ import {
 
 import Date from '../components/Date';
 import Title from '../components/Title';
-import SubTitle from '../components/SubTitle';
 import Hero from '../components/Hero';
 import LogoTitle from '../components/LogoTitle';
 import MissionStatus from '../components/MissionStatus';
