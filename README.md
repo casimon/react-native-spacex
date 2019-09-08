@@ -8,7 +8,7 @@ This spaceX challenge uses:
 - [x] Redux
 - [x] Axios
 - [x] Redux Axios Middleware
-- [x] Redux Native Maps
+- [x] React Native Maps
 
 ## Install instructions
 
