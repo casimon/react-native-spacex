@@ -32,10 +32,6 @@ class PhotosScreen extends React.Component<Props, State> {
     };
   }
 
-  onPress = (item: any) => {
-    this.props.navigation.navigate('Detail', {item});
-  };
-
   filterLaunches = (text: string) => {
     const {launches} = this.props;
     const data = launches.filter((launch: any) =>

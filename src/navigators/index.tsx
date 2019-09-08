@@ -1,4 +1,5 @@
 import React from 'react';
+import {Platform} from 'react-native';
 import {createAppContainer} from 'react-navigation';
 import {createStackNavigator} from 'react-navigation-stack';
 import {createBottomTabNavigator} from 'react-navigation-tabs';
@@ -6,6 +7,7 @@ import {createBottomTabNavigator} from 'react-navigation-tabs';
 import HomeScreen from '../screens/HomeScreen';
 import DetailScreen from '../screens/DetailScreen';
 import PhotosScreen from '../screens/PhotosScreen';
+import MapScreen from '../screens/MapScreen';
 import TabImage from '../components/TabImage';
 
 import colors from '../constants/colors';
@@ -59,10 +61,40 @@ const PhotosStack = createStackNavigator(
   }
 );
 
+const MapStack = createStackNavigator(
+  {
+    Map: MapScreen
+  },
+  {
+    initialRouteName: 'Map',
+    animationEnabled: false,
+    transitionConfig: () => ({
+      transitionSpec: {
+        duration: 0
+      }
+    }),
+    defaultNavigationOptions: {
+      headerStyle: {
+        backgroundColor: colors.black
+      },
+      headerTintColor: colors.white,
+      headerTitleStyle: {
+        fontWeight: 'bold'
+      }
+    }
+  }
+);
+
+let nav = {};
+if (Platform.OS === 'ios') {
+  nav = {Home: HomeStack, Map: MapStack, Photos: PhotosStack};
+} else {
+  nav = {Home: HomeStack, Photos: PhotosStack};
+}
+
 const AppNavigator = createBottomTabNavigator(
   {
-    Home: HomeStack,
-    Photos: PhotosStack
+    ...nav
   },
   {
     defaultNavigationOptions: ({navigation}: any) => ({
@@ -81,6 +113,8 @@ const AppNavigator = createBottomTabNavigator(
           iconName = `tabHome`;
         } else if (routeName === 'Photos') {
           iconName = `tabPhotos`;
+        } else if (routeName === 'Map') {
+          iconName = `tabMap`;
         }
         return (
           <TabImage
