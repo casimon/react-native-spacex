@@ -12,7 +12,7 @@ exports[`renders logo title 1`] = `
     Object {
       "flex": 1,
       "height": 30,
-      "tintColor": "#fff",
+      "tintColor": "#ffffff",
       "width": 150,
     }
   }

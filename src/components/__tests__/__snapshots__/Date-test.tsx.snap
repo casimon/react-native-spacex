@@ -17,7 +17,7 @@ exports[`renders date correctly with date string 1`] = `
     style={
       Array [
         Object {
-          "color": "#333333",
+          "color": "#333",
           "fontSize": 12,
         },
         undefined,
@@ -48,7 +48,7 @@ exports[`renders date correctly with date string and optional style 1`] = `
     style={
       Array [
         Object {
-          "color": "#333333",
+          "color": "#333",
           "fontSize": 12,
         },
         undefined,
@@ -77,7 +77,7 @@ exports[`renders date correctly with date string and optional styleText 1`] = `
     style={
       Array [
         Object {
-          "color": "#333333",
+          "color": "#333",
           "fontSize": 12,
         },
         Object {

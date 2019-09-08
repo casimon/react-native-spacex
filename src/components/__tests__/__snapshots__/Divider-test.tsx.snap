@@ -6,7 +6,7 @@ exports[`renders divider correctly 1`] = `
     Array [
       Object {
         "alignSelf": "center",
-        "backgroundColor": "#ccc",
+        "backgroundColor": "#D4D3DE",
         "borderRadius": 2,
         "height": 4,
         "marginVertical": 16,
@@ -24,7 +24,7 @@ exports[`renders divider correctly with optional style prop 1`] = `
     Array [
       Object {
         "alignSelf": "center",
-        "backgroundColor": "#ccc",
+        "backgroundColor": "#D4D3DE",
         "borderRadius": 2,
         "height": 4,
         "marginVertical": 16,

@@ -22,7 +22,7 @@ exports[`renders search with empty search string 1`] = `
     rejectResponderTermination={true}
     style={
       Object {
-        "backgroundColor": "#ccc",
+        "backgroundColor": "#D4D3DE",
         "borderRadius": 20,
         "height": 40,
         "paddingHorizontal": 30,
@@ -56,7 +56,7 @@ exports[`renders search with search string text 1`] = `
     rejectResponderTermination={true}
     style={
       Object {
-        "backgroundColor": "#ccc",
+        "backgroundColor": "#D4D3DE",
         "borderRadius": 20,
         "height": 40,
         "paddingHorizontal": 30,
