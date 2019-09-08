@@ -44,7 +44,7 @@ class HomeScreen extends React.Component<Props, State> {
   filterLaunches = (text: string) => {
     const {launches} = this.props;
     const data = launches.filter((launch: any) =>
-      launch.mission_name.includes(text)
+      launch.mission_name.toLowerCase().includes(text.toLowerCase())
     );
     this.setState({data});
   };
