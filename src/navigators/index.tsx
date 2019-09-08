@@ -33,17 +33,42 @@ const HomeStack = createStackNavigator(
   }
 );
 
+const PhotosStack = createStackNavigator(
+  {
+    Photos: PhotosScreen
+  },
+  {
+    initialRouteName: 'Photos',
+    animationEnabled: false,
+    transitionConfig: () => ({
+      transitionSpec: {
+        duration: 0
+      }
+    }),
+    defaultNavigationOptions: {
+      headerStyle: {
+        backgroundColor: '#000000'
+      },
+      headerTintColor: '#fff',
+      headerTitleStyle: {
+        fontWeight: 'bold'
+      }
+    }
+  }
+);
+
 const AppNavigator = createBottomTabNavigator(
   {
     Home: HomeStack,
-    Photos: PhotosScreen
+    Photos: PhotosStack
   },
   {
     defaultNavigationOptions: ({navigation}: any) => ({
       tabBarOptions: {
         showLabel: false,
         style: {
-          backgroundColor: '#000'
+          borderTopWidth: 0,
+          backgroundColor: '#D4D3DE'
         }
       },
       tabBarIcon: ({focused}) => {
@@ -59,7 +84,7 @@ const AppNavigator = createBottomTabNavigator(
           <TabImage
             iconName={iconName}
             size={32}
-            color={focused ? '#524AB3' : '#fff'}
+            color={focused ? '#524AB3' : '#000'}
           />
         );
       }
