@@ -8,6 +8,8 @@ import {
   ViewStyle
 } from 'react-native';
 
+import colors from '../constants/colors';
+
 const styles = StyleSheet.create({
   p: {
     paddingVertical: 8,
@@ -15,14 +17,14 @@ const styles = StyleSheet.create({
   },
   pLabel: {
     fontSize: 14,
-    color: '#000000',
+    color: colors.black,
     fontWeight: 'bold',
     marginBottom: 8,
     textAlign: 'center'
   },
   pText: {
     fontSize: 14,
-    color: '#000000',
+    color: colors.black,
     textAlign: 'center'
   }
 });

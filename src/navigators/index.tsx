@@ -8,6 +8,8 @@ import DetailScreen from '../screens/DetailScreen';
 import PhotosScreen from '../screens/PhotosScreen';
 import TabImage from '../components/TabImage';
 
+import colors from '../constants/colors';
+
 const HomeStack = createStackNavigator(
   {
     Home: HomeScreen,
@@ -23,9 +25,9 @@ const HomeStack = createStackNavigator(
     }),
     defaultNavigationOptions: {
       headerStyle: {
-        backgroundColor: '#000000'
+        backgroundColor: colors.black
       },
-      headerTintColor: '#fff',
+      headerTintColor: colors.white,
       headerTitleStyle: {
         fontWeight: 'bold'
       }
@@ -47,9 +49,9 @@ const PhotosStack = createStackNavigator(
     }),
     defaultNavigationOptions: {
       headerStyle: {
-        backgroundColor: '#000000'
+        backgroundColor: colors.black
       },
-      headerTintColor: '#fff',
+      headerTintColor: colors.white,
       headerTitleStyle: {
         fontWeight: 'bold'
       }
@@ -68,7 +70,7 @@ const AppNavigator = createBottomTabNavigator(
         showLabel: false,
         style: {
           borderTopWidth: 0,
-          backgroundColor: '#D4D3DE'
+          backgroundColor: colors.grey
         }
       },
       tabBarIcon: ({focused}) => {
@@ -84,7 +86,7 @@ const AppNavigator = createBottomTabNavigator(
           <TabImage
             iconName={iconName}
             size={32}
-            color={focused ? '#524AB3' : '#000'}
+            color={focused ? colors.purple : colors.black}
           />
         );
       }

@@ -8,9 +8,11 @@ import {
   ViewStyle
 } from 'react-native';
 
+import colors from '../constants/colors';
+
 const styles = StyleSheet.create({
   divider: {
-    backgroundColor: '#ccc',
+    backgroundColor: colors.grey,
     width: 120,
     height: 4,
     alignSelf: 'center',

@@ -10,6 +10,8 @@ import {
 
 import moment from 'moment';
 
+import colors from '../constants/colors';
+
 const styles = StyleSheet.create({
   date: {
     paddingHorizontal: 6,
@@ -17,7 +19,7 @@ const styles = StyleSheet.create({
   },
   dateText: {
     fontSize: 12,
-    color: '#333333'
+    color: colors.charcoal
   }
 });
 

@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
     height: 40,
     borderRadius: 20,
     paddingHorizontal: 30,
-    backgroundColor: '#ccc'
+    backgroundColor: colors.grey
   }
 });
 

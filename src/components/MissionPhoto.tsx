@@ -10,6 +10,7 @@ import {
 } from 'react-native';
 
 import Title from './Title';
+import colors from '../constants/colors';
 
 const {width} = Dimensions.get('window');
 const marginHorizontal = 16;
@@ -20,7 +21,7 @@ const styles = StyleSheet.create({
     marginTop: 6,
     marginBottom: 6,
     flexDirection: 'column',
-    backgroundColor: '#000',
+    backgroundColor: colors.black,
     borderRadius: 6,
     overflow: 'hidden'
   },

@@ -8,6 +8,8 @@ import {
   ViewStyle
 } from 'react-native';
 
+import colors from '../constants/colors';
+
 const styles = StyleSheet.create({
   title: {
     paddingHorizontal: 6,
@@ -15,7 +17,7 @@ const styles = StyleSheet.create({
   },
   titleText: {
     fontSize: 24,
-    color: '#000000'
+    color: colors.black
   }
 });
 
