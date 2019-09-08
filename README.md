@@ -8,6 +8,7 @@ This spaceX challenge uses:
 - [x] Redux
 - [x] Axios
 - [x] Redux Axios Middleware
+- [x] Redux Native Maps
 
 ## Install instructions
 
@@ -66,13 +67,7 @@ react-native run-ios
 
 ## Caveats
 
-This spaceX app is intended to be an MVP that could be delivered in hours not days. Some nice to haves if time permitted:
-
+- Map screen is only supported on iOS. Android requires a Goole Map account and additional config.
 - Search is by mission name not by rocket name to show filtering
-- Splash screens
-- Fix all typescript linting errors
-- Animated loading screen
-- Map page with launch site pins by lat/long coordinates
-- Infinite scroll in mission list
-- Unit tests for reducers, screens, navigators etc
-- More rocket info
+- Thumbnail placeholders have been used for launches with missing patches
+- Unit Tests are basic snapshots. In a production app I'd use Enzyme.
