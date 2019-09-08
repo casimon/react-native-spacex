@@ -4,9 +4,8 @@ import {ActivityIndicator, FlatList, SafeAreaView} from 'react-native';
 import {NavigationParams, NavigationScreenProp} from 'react-navigation';
 import {connect} from 'react-redux';
 
-import {listLaunches} from '../reducers';
 import LogoTitle from '../components/LogoTitle';
-import MissionCard from '../components/MissionCard';
+import MissionPhoto from '../components/MissionPhoto';
 import Search from '../components/Search';
 
 interface State {
@@ -20,7 +19,7 @@ interface Props {
   loading: boolean;
 }
 
-class HomeScreen extends React.Component<Props, State> {
+class PhotosScreen extends React.Component<Props, State> {
   static navigationOptions = {
     headerTitle: <LogoTitle />
   };
@@ -31,10 +30,6 @@ class HomeScreen extends React.Component<Props, State> {
       search: '',
       data: []
     };
-  }
-
-  componentDidMount() {
-    this.props.listLaunches(30, 0);
   }
 
   onPress = (item: any) => {
@@ -56,14 +51,13 @@ class HomeScreen extends React.Component<Props, State> {
 
   keyExtractor = (item: any) => item.mission_name.replace(/\s/g, '');
 
-  renderItem = ({item}: any) => (
-    <MissionCard
-      title={item.mission_name}
-      date={item.launch_date_utc}
-      thumbnail={item.links.mission_patch_small}
-      onPress={() => this.onPress(item)}
-    />
-  );
+  renderItem = ({item}: any) =>
+    item.links.flickr_images.length > 0 ? (
+      <MissionPhoto
+        title={item.mission_name}
+        url={item.links.flickr_images[0]}
+      />
+    ) : null;
 
   render() {
     const {launches, loading} = this.props;
@@ -98,11 +92,7 @@ const mapStateToProps = (state: any) => {
   };
 };
 
-const mapDispatchToProps = {
-  listLaunches
-};
-
 export default connect(
   mapStateToProps,
-  mapDispatchToProps
-)(HomeScreen);
+  null
+)(PhotosScreen);
