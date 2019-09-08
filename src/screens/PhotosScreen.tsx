@@ -64,7 +64,7 @@ class PhotosScreen extends React.Component<Props, State> {
     return loading ? (
       <SafeAreaView
         style={{flex: 1, justifyContent: 'center', backgroundColor: '#fff'}}>
-        <ActivityIndicator size="small" color="#000" />
+        <ActivityIndicator size="large" color="#000" />
       </SafeAreaView>
     ) : (
       <SafeAreaView style={{flex: 1, backgroundColor: '#fff'}}>
