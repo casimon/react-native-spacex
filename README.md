@@ -12,7 +12,7 @@ This spaceX challenge uses:
 
 ## Install instructions
 
-Open a terminal and cd to the root of the spaceX folder and run:
+Open a terminal and cd to the root of the project and run:
 
 ```
 yarn
@@ -28,7 +28,7 @@ You are ready to launch 🚀
 
 ## Test instructions
 
-Go to the root of the spaceX folder and run:
+Go to the root of the project and run:
 
 ```
 yarn test
@@ -51,7 +51,7 @@ List of devices attached
 emulator-5554   device
 ```
 
-Ensure you at the root of the spaceX folder and run:
+Ensure you at the root of the project folder and run:
 
 ```
 react-native run-android
@@ -59,7 +59,7 @@ react-native run-android
 
 ## Run on iOS Simulator
 
-Ensure you are at the root of the spaceX folder and run:
+Ensure you are at the root of the project folder and run:
 
 ```
 react-native run-ios
