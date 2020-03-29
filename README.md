@@ -62,6 +62,9 @@ react-native run-android
 Ensure you are at the root of the project folder and run:
 
 ```
+cd ios
+pod install
+cd ..
 react-native run-ios
 ```
 
